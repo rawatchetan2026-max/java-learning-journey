@@ -7,7 +7,7 @@
 //     }
 // }
 
-// class _Multithreding_by_threadClass {
+// class _Multithraeding_by_threadClass {
 //     public static void main(String[] args) {
 //         Mythread t = new Mythread();
 //         t.start();
@@ -32,7 +32,7 @@ class Mythread extends Thread {
 
 }
 
-class _Multithreding_by_threadClass {
+class _Multithreading_by_threadClass {
     public static void main(String[] args) {
         Mythread t1 = new Mythread("task 1");
         Mythread t2 = new Mythread("task 2");
