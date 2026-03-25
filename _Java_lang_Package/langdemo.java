@@ -1,4 +1,5 @@
 public class langdemo {
+    // Class Object
     public static void main(String[] args) {
         Myobj o = new Myobj();
         Myobj o1 = new Myobj();
@@ -9,11 +10,11 @@ public class langdemo {
     }
 }
 
-class Myobj {
+class Myobj { 
     public String toString(){
-        return "My object";
-    }
- 
+     
+
+    
     public int hashCode() {
         return 100;
     }
