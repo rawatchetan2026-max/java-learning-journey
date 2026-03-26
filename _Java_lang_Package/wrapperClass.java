@@ -31,11 +31,25 @@ public class wrapperClass {
 
         int m1 = 15;
         Integer m2 = m1;
-        Integer m3 = Integer.valueOf("AB7", 16);
+        Integer m3 = Integer.valueOf("4", 10);
+
         // here equals checks values
         System.out.println(m2.equals(m1));
         System.out.println(m2.equals(m3));
         System.out.println(m3);
+
+        // bitcount --- returns the no. of 1's in bin.
+        Integer sd = Integer.bitCount(m3);
+
+        System.out.println(sd);
+        System.out.println(Integer.parseInt("123A", 16));
+
+        System.out.println(Integer.reverse(m3));
+
+        System.out.println(Integer.toBinaryString(40));
+
+        Float a1 = 4.5f / 0;
+        System.out.println(a1);
 
     }
 }
