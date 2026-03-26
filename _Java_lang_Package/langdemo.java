@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class langdemo {
     // Class Object
     public static void main(String[] args) {
@@ -6,15 +8,16 @@ public class langdemo {
         System.out.println(o.equals(o1));
         System.out.println(o.toString());
         System.out.println(o.hashCode());
+        System.out.println(o.toString());
 
     }
 }
 
-class Myobj { 
-    public String toString(){
-     
+class Myobj {
+    public String toString() {
+        return "My object";
+    }
 
-    
     public int hashCode() {
         return 100;
     }
@@ -22,4 +25,5 @@ class Myobj {
     public boolean equals(Object o) {
         return this.hashCode() == o.hashCode();
     }
+
 }
