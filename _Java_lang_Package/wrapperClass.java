@@ -16,7 +16,7 @@ public class wrapperClass {
 
         Double h = Double.valueOf(123.232);
 
-        Character k = Character.valueOf('A');
+        Character jk = Character.valueOf('A');
 
         Boolean l = Boolean.valueOf("true");
 
@@ -28,6 +28,14 @@ public class wrapperClass {
         // auto-boxing
         int z = 10;
         Integer n = Integer.valueOf(z);
+
+        int m1 = 15;
+        Integer m2 = m1;
+        Integer m3 = Integer.valueOf("AB7", 16);
+        // here equals checks values
+        System.out.println(m2.equals(m1));
+        System.out.println(m2.equals(m3));
+        System.out.println(m3);
 
     }
 }
