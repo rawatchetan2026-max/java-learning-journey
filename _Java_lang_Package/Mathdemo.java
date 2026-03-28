@@ -10,12 +10,12 @@ public class Mathdemo {
         System.out.println(Math.cbrt(0));
 
         System.out.print("Exact Decrement : ");
-        System.out.println(Math.decrementExact(0));
+        System.out.println(Math.decrementExact(7));
 
-        // System.out.print("");
-        // System.out.println(Math.cbrt(0));
+        System.out.print("Exponent value in floating Point rep. : ");
+        System.out.println(Math.getExponent(12.56));
 
-        // System.out.print("Cube root");
-        // System.out.println(Math.cbrt(0));
+        System.out.print("Round Divsion : ");
+        System.out.println(Math.floorDiv(50, 9));
     }
 }
