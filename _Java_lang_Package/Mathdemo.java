@@ -17,5 +17,36 @@ public class Mathdemo {
 
         System.out.print("Round Divsion : ");
         System.out.println(Math.floorDiv(50, 9));
+
+        System.out.print("Log base 10 : ");
+        System.out.println(Math.log10(1000));
+
+        System.out.print("Max : ");
+        System.out.println(Math.max(50, 9));
+
+        System.out.print("Tan : ");
+        System.out.println(Math.tan(45 * Math.PI / 180));
+
+        System.out.print("Convert to Radian : ");
+        System.out.println(Math.toRadians(90));
+
+        System.out.print("convert to Degree ");
+        System.out.println(Math.atan(1));
+
+        System.out.print("Random : ");
+        System.out.println(Math.random() * 1000);
+
+        System.out.print("Power : ");
+        System.out.println(Math.pow(2, 3));
+
+        System.out.print("Random : ");
+        System.out.println(Math.random() * 1000);
+
+        System.out.print("Exact Product : ");
+        System.out.println(Math.multiplyExact(100, 200));
+
+        System.out.print("Random : ");
+        System.out.println(Math.nextAfter(12.5, 13));
+
     }
 }
