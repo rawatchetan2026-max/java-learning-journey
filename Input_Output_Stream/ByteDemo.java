@@ -1,26 +1,30 @@
 import java.io.*;
-import java.io.IOException;
 
 public class ByteDemo {
-    public static void main(String[] args) {
-        try {
-            byte[] b = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j' };
+    public static void main(String[] args) throws Exception {
 
-            ByteArrayInputStream bis = new ByteArrayInputStream(b);
-            int x;
-            while ((x = bis.read()) != -1) {
-                // reading one byte at a time
-                System.out.print((char) x + "\t");
-            }
-            // bis.reset();
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
 
-            // // return byte arr at one go
-            // String str = new String(bis.readAllBytes());
-            // System.out.println(str);
+        bos.write('a');
+        bos.write('b');
+        bos.write('c');
+        bos.write('d');
+        bos.write('e');
 
-            bis.close();
-        } catch (IOException e) {
-            System.out.println(e);
+        byte b[] = bos.toByteArray();
+
+        ByteArrayInputStream bis = new ByteArrayInputStream(b);
+
+        for (int x : b) {
+            System.out.println((char) x);
         }
+
+        int x;
+
+        while ((x = bis.read()) != -1) {
+            System.out.println((char) x);
+        }
+        bos.close();
+        bis.close();
     }
 }
