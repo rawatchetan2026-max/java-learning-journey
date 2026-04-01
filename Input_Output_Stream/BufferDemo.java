@@ -4,7 +4,7 @@ public class BufferDemo {
     public static void main(String[] args) {
         try {
             FileInputStream fis = new FileInputStream(
-                    "C:\\Users\\himmat\\Documents\\Desktop\\Downloads\\Favorites\\Documents\\GitHub\\java-learning-journey\\Input_Output_Stream\\Output.txt");
+                    "C:\\Users\\chetan\\Documents\\Desktop\\Downloads\\Favorites\\Documents\\GitHub\\java-learning-journey\\Input_Output_Stream\\Output.txt");
             BufferedInputStream bis = new BufferedInputStream(fis);
 
             System.out.println("file : " + fis.markSupported());
