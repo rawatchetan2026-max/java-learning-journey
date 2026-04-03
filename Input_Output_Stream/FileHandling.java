@@ -6,6 +6,9 @@ public class FileHandling {
 
         File f = new File(
                 "C:\\Users\\himmat\\Documents\\Desktop\\Downloads\\Favorites\\Documents\\GitHub\\java-learning-journey\\lamdaDemo");
+        f.setReadable(true);
+        FileInputStream fis = new FileInputStream(f);
+
         System.out.println(f.getCanonicalPath());
 
         System.out.println(f.isDirectory());
