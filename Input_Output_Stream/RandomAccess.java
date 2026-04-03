@@ -11,7 +11,7 @@ public class RandomAccess {
         // COPY DATA TO ANOTHER FILE"
 
         System.out.print((char) rf.read());
-        System.out.print(rf.read());
+        System.out.print((char) rf.read());
         System.out.print((char) rf.read());
         System.out.print((char) rf.read());
         System.out.print((char) rf.read());
