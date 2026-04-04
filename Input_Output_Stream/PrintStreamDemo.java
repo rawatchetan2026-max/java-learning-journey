@@ -16,14 +16,15 @@ class MyRead {
                                                              // also it cannot read Strings
         BufferedReader br = new BufferedReader(new InputStreamReader(fis)); // Buffered reader to read the file in one
                                                                             // go in Character form also buffered reader
-                                                                            // is having a method called readLine() or
-                                                                            // read as a String
+                                                                            // is having a method called readLine() here
+                                                                            // the obj of InputStreamReader is acting as
+                                                                            // a bridge which convert character to bytes
 
-        Student s = new Student(); // obj of Student class
+        Student s = new Student(); // empty obj of Student class
 
         // giving the values to the members of the Student class from the My.txt
 
-        s.roll = Integer.parseInt(br.readLine());
+        s.roll = Integer.parseInt(br.readLine());// typecast
         s.Name = br.readLine();
         s.Dept = br.readLine();
 
@@ -38,7 +39,7 @@ public class PrintStreamDemo {
     public static void main(String[] args) throws Exception {
         FileOutputStream fo = new FileOutputStream("My.txt"); // It is used to write the file if file not present then
                                                               // it creates and then edit it
-        PrintStream ps = new PrintStream(fo); // it is used to print the members if an members of class to a file..
+        PrintStream ps = new PrintStream(fo); // used to write on txt file (belongs to byte stream class)
 
         Student s = new Student();
         s.roll = 10;
@@ -49,7 +50,8 @@ public class PrintStreamDemo {
         ps.println(s.Name);
         ps.println(s.Dept);
 
-        ps.close();
+        ps.close();// file closing to prevent data leak
+        fo.close();
 
         new MyRead().read();
 
