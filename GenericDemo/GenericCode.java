@@ -1,23 +1,31 @@
 package GenericDemo;
 
-import java.util.Arrays;
+class Data<T> {// This is a generic class
 
-public class GenericCode<T> {
-    // T d[] = new T[] // comile time error as comiler doesn't know about T
-    T data[] = (T[]) new Object[3]; // array of Object type cast as genric
+    // Variable of type T unknown type decided later
+    private T obj;
 
+    public void setData(T obj) {
+        this.obj = obj;
+    }
+
+    public T getData() {
+        return obj;
+    }
+}
+
+// Main class where program starts
+public class GenericCode {
     public static void main(String[] args) {
-        // Object obj[] = new Object[3]; array of Object is type-safe
-        // obj[0] = "hi";
-        // obj[1] = "hi";
-        // obj[2] = new Integer(10);
-        // System.out.println(Arrays.toString(obj));
 
-        GenericCode<String> gc = new GenericCode<>();
+        // Creating object of Data class with type String
+        // Now T will behave like String everywhere in the class
+        Data<String> obj = new Data<>();
 
-        gc.data[0] = "hi";
-        gc.data[1] = "bye";
-        // gc.data[2] = 10; //can't be inserted to the array coz now the comiler knows::
-        // T belongs to String
+        obj.setData("hello world");
+
+        // No need for type casting because of generics
+        // Printing the value
+        System.out.println(obj.getData());
     }
 }
