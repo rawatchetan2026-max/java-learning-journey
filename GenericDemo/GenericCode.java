@@ -25,7 +25,7 @@ public class GenericCode {
         obj.setData("hello world");
 
         // No need for type casting because of generics
-        // Printing the value
+
         System.out.println(obj.getData());
     }
 }
