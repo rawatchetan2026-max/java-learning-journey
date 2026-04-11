@@ -2,6 +2,8 @@ package CollectionFrameWork;
 
 import java.util.*;
 
+import javax.sound.sampled.SourceDataLine;
+
 public class ArrayListDemo {
     public static void main(String[] args) {
         ArrayList<Integer> al1 = new ArrayList<>();
@@ -19,11 +21,19 @@ public class ArrayListDemo {
         System.out.println(al2);
         System.out.println(al1.size());
 
-        Iterator<Integer> it = al1.iterator();
-
-        while (it.hasNext()) {
-            System.out.println(it.next());
+        // Iterator<Integer> it = al1.Iterator();
+        // // by while
+        // while (it.hasNext()) {
+        // System.out.println(it.next());
+        // }
+        // by for loop
+        for (Iterator<Integer> i = al1.iterator(); i.hasNext();) {
+            System.out.println(i.next());
         }
+        // lambda exp.
+        al1.forEach(n -> System.out.println(n));
 
+        // method ref.
+        al1.forEach(System.out::println);
     }
 }
