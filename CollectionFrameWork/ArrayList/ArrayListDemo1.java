@@ -1,5 +1,3 @@
-
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class ArrayListDemo1 {
@@ -17,12 +15,12 @@ public class ArrayListDemo1 {
         return Max;
     }
 
-    // Reverse an Arrlist
-    public static ArrayList<Integer> Rev(ArrayList<Integer> AL) {
-        int left = 0, right = Al.size() - 1;
-        while (left)
-            return AL;
-    }
+    // // Reverse an Arrlist
+    // public static ArrayList<Integer> Rev(ArrayList<Integer> AL) {
+    // for(int i = 0 ; i < AL.size()/2 ; i++){
+
+    // }
+    // }
 
     public static int LC11(int[] arr) {
         int area = 0, maxWater = 0, ele = 0;
