@@ -1,6 +1,30 @@
 import java.util.*;
 
 public class ArrayDequedemo {
+    public static boolean validParenthesis(String str) {
+
+        ArrayDeque<Character> d = new ArrayDeque<>();
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if (ch == '(' || ch == '[' || ch == '{') {
+                d.offerLast(str.charAt(i));
+            } else {
+                if (d.isEmpty())
+                    return false;
+
+                if ((ch == ')' && d.peekLast() == '(') ||
+                        (ch == ']' && d.peekLast() == '[') ||
+                        (ch == '}' && d.peekLast() == '{')) {
+                    d.pollLast();
+                } else {
+                    return false;
+                }
+            }
+        }
+        return d.isEmpty();
+    }
+
     public static void main(String[] args) {
         ArrayDeque<Integer> dq = new ArrayDeque<>();
 
@@ -18,6 +42,6 @@ public class ArrayDequedemo {
         System.out.println("value at last : " + dq.peekLast());
 
         System.out.println(dq);
-
+        System.out.println(validParenthesis("([)"));
     }
 }
