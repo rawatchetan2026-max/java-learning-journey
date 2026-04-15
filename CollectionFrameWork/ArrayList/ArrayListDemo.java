@@ -1,5 +1,3 @@
-package CollectionFrameWork;
-
 import java.util.*;
 
 @FunctionalInterface
@@ -16,30 +14,56 @@ public class ArrayListDemo {
 
         ArrayList<Integer> al2 = new ArrayList<>(Arrays.asList(20, 30, 40, 50));
 
-        // for (Iterator<Integer> i = al1.iterator(); i.hasNext();) {
-        // System.out.println(al1.get(i));
-        // }
-        // al1.addAll(1, al2);
-        // al1.add(5, 70);
-        // System.out.println(al1);
-        // System.out.println(al1.indexOf(70));
-        // System.out.println(al1.lastIndexOf(70));
-        // System.out.println(al2);
-        // System.out.println(al1.size());
+        ArrayList<String> list = new ArrayList<>();
 
-        // Iterator<Integer> it = al1.Iterator();
-        // // by while
-        // while (it.hasNext()) {
-        // System.out.println(it.next());
-        // }
-        // by for loop
-        // for (Iterator<Integer> i = al1.iterator(); i.hasNext();) {
-        // System.out.println(i.next());
-        // }
-        // // lambda exp.
-        // al1.forEach(n -> System.out.println(n));
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Mango");
 
-        // // method ref.
-        // al1.forEach(System.out::println);
+        list.add(1, "Orange");
+
+        System.out.println("After adding: " + list);
+
+        System.out.println("Element at index 2: " + list.get(2));
+
+        list.set(2, "Grapes");
+        System.out.println("After update: " + list);
+
+        // 5. Removing elements
+        list.remove(1);
+        list.remove("Mango");
+
+        System.out.println("After removal: " + list);
+
+        // 6. Searching
+        System.out.println("Contains Apple? " + list.contains("Apple"));
+        System.out.println("Index of Apple: " + list.indexOf("Apple"));
+
+        // 7. Size
+        System.out.println("Size: " + list.size());
+
+        // 8. Iterating
+        for (String item : list) {
+            System.out.println(item);
+        }
+
+        // 9. Sorting
+        Collections.sort(list);
+        System.out.println("After sorting: " + list);
+
+        // 10. Reverse
+        Collections.reverse(list);
+        System.out.println("After reverse: " + list);
+
+        // 11. Copying list
+        ArrayList<String> newList = new ArrayList<>(list);
+        System.out.println("Copied list: " + newList);
+
+        // 12. Checking empty
+        System.out.println("Is empty? " + list.isEmpty());
+
+        // 13. Clearing list
+        list.clear();
+        System.out.println("After clear: " + list);
     }
 }
