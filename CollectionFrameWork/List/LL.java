@@ -1,3 +1,5 @@
+// implementation of a singly Linked list....
+
 class LL {
     Node Head;
 
